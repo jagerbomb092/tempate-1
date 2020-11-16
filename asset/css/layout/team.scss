@@ -1,0 +1,91 @@
+.team{
+    padding: $margin-tb;
+    @include height(auto);
+    background-color: $white;
+    &-title{
+        font-size: 40px;
+        @include font(700);
+        text-align: center;
+        line-height: 48px;
+        color: $black;
+        margin-bottom: 15px;
+    }
+    &-info{
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+        color: $text;
+        line-height: 19px;
+        margin-bottom: 64px;
+    }
+    &-item{
+        @include height(auto);
+        text-align: center;
+        margin-bottom: 48px;
+        & img{
+            width: 224px;
+            height: 224px;
+            border-radius: 100%;
+            border: 7px solid #e9ecef;
+            margin: auto;
+        }
+        & h1{
+            font-size: 24px;
+            @include font(700);
+            line-height: 29px;
+            margin-top: 24px;
+        }
+        & p{
+            font-family: $robo;
+            font-size: 16px;
+            line-height: 28px;
+            color: $text;
+            margin-bottom: 16px;
+        }
+        &__icon{
+            color: #fff;
+            @include display(center);
+            & a{
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                background-color: $black-bg;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                border: 1px solid $black-bg;
+                margin: 0 8px;
+                & i{
+                    font-size: 16px;
+                    
+                    
+                }
+                &:focus{
+                    outline: 0;
+                    box-shadow: 0 0 0 0.2rem rgba(23, 26, 29, 0.4);
+                }
+            }
+        }
+    }
+    &-footer{
+        text-align: center;
+        font-size: 16px;
+        color: $text;
+        font-family: $robo;
+        width: 65%;
+        line-height: 28px;
+        margin: auto;
+    }
+}
+.sponser{
+    padding: 48px 0;
+    @include height(auto);
+    &-item{
+        text-align: center;
+        margin-bottom: 15px;
+        & img{
+            width: 190px;
+        }
+    }
+}

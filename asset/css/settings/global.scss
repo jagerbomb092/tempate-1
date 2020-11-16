@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    &.body-hidden{
+        overflow: hidden;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    
+}
+img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+p{
+    line-height: 28px;
+}
+h1{
+    line-height: 48px;
+}
+button{
+    &:focus{
+        outline: none;
+    }
+    
+    cursor: pointer;
+}

@@ -1,0 +1,82 @@
+.contact {
+    background-image: url("../image/map-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #212529;
+    padding: $margin-tb;
+    @include height(auto);
+    &-title {
+        font-size: 40px;
+        @include font(700);
+        text-align: center;
+        line-height: 48px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &-info {
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+        color: $text;
+        line-height: 19px;
+        margin-bottom: 64px;
+    }
+    &-input {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 24px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-family: $robo;
+        font-size: 16px;
+        &::placeholder{
+            color: rgb(206,212,208);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+    }
+    & .area-control {
+        margin-bottom: 0;
+    }
+    &-text {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-family: $robo;
+        color: $text;
+        font-size: 16px;
+        min-height: 160px;
+        &::placeholder{
+            color: rgb(206,212,208);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        & .area-control {
+            margin-bottom: 24px;
+        }
+    }
+    &-btn {
+        @include display(center);
+        &__item {
+            background-color: $yellow;
+            padding: 26px 38px;
+            font-size: 18px;
+            color: #fff;
+            @include font(700);
+            border-radius: 4px;
+            border: 1px solid $yellow;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: #e6b301;
+            }
+        }
+    }
+    & .input-control {
+        margin-bottom: 64px;
+    }
+}

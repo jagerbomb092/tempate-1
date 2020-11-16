@@ -1,0 +1,186 @@
+.header{
+    @include height(auto);
+    padding: 8px 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    
+    &-top{
+        @include height(auto);
+        @include display(space-between);
+        flex-wrap: wrap;
+        &__logo{
+            font-size: 24px;
+            transition: font-size 0.3s ease-in-out;
+            margin-right: 16px;
+            padding: 5px 0;
+            & img {
+                height: 32px;
+                width: auto;
+                transition: height 0.3s ease-in-out;
+            }
+        }
+        &__menu{
+            display: flex;
+            transition: max-height 0.35s ease-in-out;
+            & :nth-child(1){
+                margin-right: 16px;
+                & a{
+                    margin-right: 0;
+                    padding: 8px;
+                }
+            }
+            & :nth-child(2){
+                margin-right: 16px;
+                & a{
+                    margin-right: 0;
+                    padding: 8px;
+                }
+            }
+            & :nth-child(3){
+                margin-right: 16px;
+                & a{
+                    margin-right: 0;
+                    padding: 8px;
+                }
+            }
+            & :nth-child(4){
+                margin-right: 16px;
+                & a{
+                    margin-right: 0;
+                    padding: 8px;
+                }
+            }
+            & :nth-child(5){
+                margin-right: 0;
+                & a{
+                    margin-right: 0;
+                    padding: 8px;
+                }
+            }
+            & a{
+                @include font(400);
+                font-size: 15px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-align: right;
+                &.link-active{
+                    color: $yellow;
+                }
+                &:hover{
+                    color: $yellow;
+                }
+            }
+            
+        }
+        &__btn{
+            display: none;
+            background-color: $yellow;
+            padding: 12px;
+            color: #fff;
+            border: none;
+            font-size: 12px;
+            line-height: 15px;
+            border-radius: 4px;
+            & i{
+                margin-left: 5px;
+            }
+        }
+    }
+    &.change{
+        background-color: $black;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        & .header-top__logo{
+            font-size: 20px;
+            & img{
+                height: 24px;
+            }
+        }
+    }
+}
+@media screen and (max-width:991px){
+    .header{
+        background-color: $black;
+        padding: 18px 16px;
+        &-top{
+            &__logo{
+                font-size: 20px;
+                & img{
+                    height: 24px;
+                }
+            }
+            &__menu{
+                flex-direction: column;
+                flex-basis: 100%;
+                max-height: 0px;
+                overflow: hidden;
+                
+                & :nth-child(1){
+                    margin-right: 0px;
+                    & a{
+                        margin-right: 0;
+                        padding: 8px 0;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+                & :nth-child(2){
+                    margin-right: 0px;
+                    & a{
+                        margin-right: 0;
+                        padding: 8px 0;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+                & :nth-child(3){
+                    margin-right: 0px;
+                    & a{
+                        margin-right: 0;
+                        padding: 8px 0;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+                & :nth-child(4){
+                    margin-right: 0px;
+                    & a{
+                        margin-right: 0;
+                        padding: 8px 0px;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+                & :nth-child(5){
+                    margin-right: 0;
+                    & a{
+                        margin-right: 0;
+                        padding: 8px 0px;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+                & li{
+                    text-align: left;
+                }
+                
+            }
+            & .show{
+                max-height: 110vh;
+                
+            }
+            &__btn{
+                display: block;
+            }
+        }
+    }
+    
+}

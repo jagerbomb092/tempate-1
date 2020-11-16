@@ -1,0 +1,54 @@
+.banner {
+    @include height(auto);
+    padding-top: 272px;
+    padding-bottom: 200px;
+    background-image: url("../image/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    &-welcome {
+        font-family: $robo;
+        font-style: italic;
+        font-size: 36px;
+        margin-bottom: 32px;
+        line-height: 36px;
+    }
+    &-main {
+        @include font(700);
+        font-size: 72px;
+        margin-bottom: 64px;
+        line-height: 72px;
+    }
+    &-btn {
+        @include font(700);
+        border-radius: 4px;
+        font-size: 18px;
+        background-color: $yellow;
+        color: #fff;
+        padding: 20px 40px;
+        display: inline-block;
+        line-height: 1.5;
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+            background-color: #e6b301;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner {
+        padding-top: 168px;
+        padding-bottom: 96px;
+        &-main {
+            font-size: 52px;
+            line-height: 52px;
+            margin-bottom: 32px;
+        }
+        &-welcome {
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 25px;
+        }
+    }
+}

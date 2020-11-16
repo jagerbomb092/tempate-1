@@ -1,0 +1,50 @@
+.footer{
+    text-align: center;
+    padding: 24px 0;
+    @include height(auto);
+    
+    &-info{
+         font-size: 14px;
+         color: $black;
+         @include font(400);
+         @include display(center);
+         height: 100%;
+    }
+    &-icon{
+        color: #fff;
+        @include display(center);
+        margin: 16px 0;
+        & a{
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            background-color: $black-bg;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            border: 1px solid $black-bg;
+            margin: 0 8px;
+            & i{
+                font-size: 16px;
+            }
+            &:focus{
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(23, 26, 29, 0.4);
+            }
+        }
+    }
+    &-content{
+        color: $yellow;
+        font-size: 14px;
+        @include font(400);
+        margin: 0 10px ;
+        &:hover{
+            text-decoration: underline;
+            color: #e6b301;
+        }
+    }
+    & .link-control{
+        @include display(center)
+    }
+}
